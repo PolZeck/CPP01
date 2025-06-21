@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 09:44:53 by pledieu           #+#    #+#             */
-/*   Updated: 2025/06/21 11:03:56 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2025/06/21 16:27:50 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ int main()
 {
 	{
 		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		HumanA bob("Bob", club);  // HumanA is always armed (weapon passed by reference)
+		bob.attack();             // Uses initial weapon type
+		club.setType("some other type of club");  // Weapon type is changed dynamically
+		bob.attack();             // Reflects the new weapon type
 	}
 	{
 		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+		HumanB jim("Jim");        // HumanB starts unarmed
+		jim.setWeapon(club);      // Weapon is set after construction
+		jim.attack();             // Uses current weapon type
+		club.setType("some other type of club");  // Change weapon type again
+		jim.attack();             // Weapon change is reflected here too
 	}
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 11:46:10 by pledieu           #+#    #+#             */
-/*   Updated: 2025/06/21 12:07:54 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2025/06/21 16:35:24 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void Harl::error(void) {
 
 void Harl::complain(std::string level) {
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    // Array of member function pointers matching each level
     void (Harl::*functions[])(void) = {
         &Harl::debug,
         &Harl::info,
@@ -40,10 +41,10 @@ void Harl::complain(std::string level) {
 
     for (int i = 0; i < 4; ++i) {
         if (levels[i] == level) {
-            (this->*functions[i])();
+            (this->*functions[i])();  // Dynamically call the matching method
             return;
         }
     }
 
-    std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+    std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;  // Fallback for unknown levels
 }
