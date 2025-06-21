@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/21 09:43:16 by pledieu           #+#    #+#             */
-/*   Updated: 2025/06/21 11:40:06 by pledieu          ###   ########lyon.fr   */
+/*   Created: 2025/06/21 11:45:55 by pledieu           #+#    #+#             */
+/*   Updated: 2025/06/21 11:46:04 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#ifndef HARL_HPP
+#define HARL_HPP
 
 #include <string>
 
-class Weapon {
+class Harl {
 private:
-    std::string _type;
+    void debug(void);
+    void info(void);
+    void warning(void);
+    void error(void);
 
 public:
-    Weapon(std::string type);
-    const std::string& getType() const;
-    void setType(std::string newType);
+    void complain(std::string level);
 };
 
 #endif

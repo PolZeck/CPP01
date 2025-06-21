@@ -6,11 +6,11 @@
 #    By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/17 12:03:46 by pledieu           #+#    #+#              #
-#    Updated: 2025/06/21 11:50:14 by pledieu          ###   ########lyon.fr    #
+#    Updated: 2025/06/21 12:19:44 by pledieu          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        := Harl
+NAME        := harlFilter
 
 CXX         := c++
 CXXFLAGS    := -Wall -Wextra -Werror -std=c++98 -Iinc
