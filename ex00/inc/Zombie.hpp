@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 11:30:59 by pledieu           #+#    #+#             */
-/*   Updated: 2025/06/18 12:02:07 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2025/06/22 07:48:51 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     Zombie(std::string name);   // constructor
     ~Zombie();                  // destructor
 
-    void announce() const;      // méthode d’annonce
+    void announce() const;      // annoucement 
 };
 
 #endif
